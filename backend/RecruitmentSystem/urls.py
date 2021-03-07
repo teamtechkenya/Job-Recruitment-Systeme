@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+admi.site.site_header = "Job Recruitment System"
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
