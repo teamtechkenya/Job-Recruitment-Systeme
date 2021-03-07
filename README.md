@@ -2,19 +2,25 @@
 This is the project for recruiting people into a jobs done by teamtechkenya nembers.
 
 #The system should: 
-1.Provide user registration/login.
-2. Record all details  of applicant. 
-3.Provide password recovery.
-4. Display job  vacancies. 
-5. Allow applicant to edit profile.
-6. Allow applicants to apply for  job  and post resume.
-7. The system should  be able to store resume
-8. Allow admin to sort and filter appliccants based on some criteria/qualification
-9. User can set resume active or inactive 
-10. Display shorlisted candidates and send notification via email.
-11. Allow applicant to view jobs he has already applied
-12. Allow employer to add jobs with the requirements 
-13. Employer can add,edit or delete job
+Provide user registration/login.
+Provide password recovery.
+Allow applicant to edit profile.
+
+Record all details  of applicant. 
+Allow applicants to apply for  job  and post resume.
+The system should  be able to store resume
+User can set resume active or inactive
+
+Display job  vacancies. 
+Allow applicant to view jobs he has already applied
+
+Allow admin to sort and filter appliccants based on some criteria/qualification
+
+
+ 
+Display shorlisted candidates and send notification via email. # Itsregalo
+Allow employer to add jobs with the requirements # Itsregalo
+Employer can add,edit or delete job # Itsregalo
 
 
 Read the instructions well then
