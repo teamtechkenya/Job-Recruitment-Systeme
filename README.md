@@ -1,7 +1,7 @@
-# Job-Recruitment-Systeme
+# Job-Recruitment-System
 This is the project for recruiting people into a jobs done by teamtechkenya nembers.
 
-The system should: 
+#The system should: 
 1.Provide user registration/login.
 2. Record all details  of applicant. 
 3.Provide password recovery.
