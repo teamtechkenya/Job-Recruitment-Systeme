@@ -22,7 +22,7 @@ def register(request):
         
         return redirect('login')
     else:
-        return render(request,'register.html') 
+        return render(request,'user/register.html') 
 
 """
 def register(request):
