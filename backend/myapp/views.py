@@ -59,8 +59,8 @@ class SignUpView(TemplateView):
     template_name = 'registration/signup_form.html'
 
 def home(request):
-    return render(request,'myapp/home.html')
+    return render(request,'myapp/appdash.html')
 
 
 def index(request):
-    return render(request,'myapp/index.html')
+    return render(request,'myapp/empdash.html')

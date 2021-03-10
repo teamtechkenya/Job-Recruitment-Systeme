@@ -146,7 +146,8 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
 }
 
-
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Third party apps configuration
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
