@@ -42,6 +42,6 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=CustomUser)
 def save_user_profile(sender, instance, **kwargs):
     if instance.user_type == 1:
-        instance.Employer.save()
+        instance.employer.save()
     if instance.user_type == 2:
-        instance.Applicant.save()
+        instance.applicant.save()
