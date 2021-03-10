@@ -29,3 +29,19 @@ class Applicant(models.Model):
 
     def __str__(self):
         return f'{self.admin.first_name}  {self.admin.last_name} - {self.gender}'
+
+@receiver(post_save, sender=CustomUser)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        if instance.user_type == 1:
+            Employer.objects.create(admin=instance)
+        
+        if instance.user_type == 2:
+            Applicant.objects.create(admin=instance,address="",profile_pic="",gender="")
+
+@receiver(post_save, sender=CustomUser)
+def save_user_profile(sender, instance, **kwargs):
+    if instance.user_type == 1:
+        instance.Employer.save()
+    if instance.user_type == 2:
+        instance.Applicant.save()
