@@ -1,1 +1,71 @@
-Fuck
+
+        <form role="form" action="/add_employer_save" method="post">
+          {% csrf_token %}
+          <div class="card-body">
+            <div class="form-group">
+              <label>Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                placeholder="Enter email"
+              />
+            </div>
+            <div class="form-group">
+              <label>password</label>
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                placeholder="Password"
+              />
+            </div>
+
+            <div class="form-group">
+              <label>First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                name="first_name"
+                placeholder="First Name"
+              />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                name="last_name"
+                placeholder="Last Name"
+              />
+            </div>
+            <div class="form-group">
+              <label>Username</label>
+              <input
+                type="text"
+                class="form-control"
+                name="username"
+                placeholder="User Name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Adress</label>
+              <input
+                type="text"
+                class="form-control"
+                name="address"
+                placeholder="Adress"
+              />
+            </div>
+         
+            </div>
+          </div>
+          <!-- /.card-body -->
+
+          <div class="card-footer">
+            <button type="submit" class="btn btn-primary btn-block">
+              Add Student
+            </button>
+          </div>
+        </form>

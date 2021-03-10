@@ -25,13 +25,15 @@ def doLogin(request):
     if request.method != "POST":
         return HttpResponse("<h2 > Method Not Allowed </h2> ")
     else:
-        user = EmailBackEnd.authenticate(request, username = request.POST.get("email"), password = request.POST.get("password"))
+        # username = request.POST.get("email"),
+        user = EmailBackEnd.authenticate(request,  password = request.POST.get("password"))
         if user != None:
             login(request, user)
             if user.user_type == "1":
                 return HttpResponseRedirect('/admin_home')
             else:
-                return HttpResponse("Student Login"+str(user.user_type))
+                return HttpResponseRedirect('/applicant_home')
+                # return HttpResponse("Applicant Login"+str(user.user_type))
             # return HttpResponse("Email :" + request.POST.get("email") + "Password :" + request.POST.get("password"))
         else:
             messages.error(request,"Invalid Login Details")
@@ -40,7 +42,7 @@ def doLogin(request):
 
 def add_employer(request):
     courses = Employer.objects.all()
-    return render(request, 'employer_template/add_employer_template.html',{"courses":courses})
+    return render(request, 'employer_add_template.html',{"courses":courses})
 
 
 
@@ -55,11 +57,11 @@ def add_employer_save(request):
         password = request.POST.get("password")
         address = request.POST.get("address")
         try:
-            user = CustomUser.objects.create_user(username=username, password=password, first_name=first_name, last_name=last_name, email=email, user_type=3)
+            user = CustomUser.objects.create_user(username=username, password=password, first_name=first_name, last_name=last_name, email=email, user_type=1)
             user.employer.address = address
             user.save()
             messages.success(request, "Successfully added employer")
-            return HttpResponseRedirect("/add_employer")
+            return HttpResponseRedirect("/")
         except:
             messages.error(request, "Failed to add employer")
             return HttpResponseRedirect("/add_employer")
